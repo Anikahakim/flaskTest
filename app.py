@@ -5,3 +5,7 @@ app = Flask(__name__)
 app.config['SECRET_KEY'] = 'apples123'
 app.debug = True
 toolbar = DebugToolbarExtension(app)
+
+@app.route('/')
+def index():
+    return 'Hello, world!'
